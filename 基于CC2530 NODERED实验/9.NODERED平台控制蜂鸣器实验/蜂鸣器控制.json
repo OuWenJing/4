@@ -1,0 +1,131 @@
+[
+    {
+        "id": "4e64e72b2a7263ef",
+        "type": "tab",
+        "label": "课程----蜂鸣器控制流程",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "590c307c60ef90d2",
+        "type": "ui_switch",
+        "z": "4e64e72b2a7263ef",
+        "name": "",
+        "label": "蜂鸣器开关",
+        "tooltip": "",
+        "group": "8a22f4ba.9893b8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "BEEP,ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "BEEP,OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "170e55b7c661d50f",
+                "1617023dbf3a5edd"
+            ]
+        ]
+    },
+    {
+        "id": "170e55b7c661d50f",
+        "type": "function",
+        "z": "4e64e72b2a7263ef",
+        "name": "function",
+        "func": "var flag = msg.payload;\nif (flag == \"BEEP,ON\") {\n    msg = { payload: \"$BEEP,1\" };\n}\nif (flag == \"BEEP,OFF\") {\n    msg = { payload: \"$BEEP,0\" };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "788bf54257b8a7bb",
+                "876f569532d3e142"
+            ]
+        ]
+    },
+    {
+        "id": "788bf54257b8a7bb",
+        "type": "tcp out",
+        "z": "4e64e72b2a7263ef",
+        "name": "",
+        "host": "",
+        "port": "9080",
+        "beserver": "server",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 760,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1617023dbf3a5edd",
+        "type": "debug",
+        "z": "4e64e72b2a7263ef",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "876f569532d3e142",
+        "type": "debug",
+        "z": "4e64e72b2a7263ef",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8a22f4ba.9893b8",
+        "type": "ui_group",
+        "name": "蜂鸣器控制",
+        "tab": "e2229b2547ee47e9",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2229b2547ee47e9",
+        "type": "ui_tab",
+        "name": "NODE RED 教程---蜂鸣器控制",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

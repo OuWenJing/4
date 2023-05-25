@@ -1,0 +1,206 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         07/May/2023  22:38:18 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Components\HARDWARE\beep.c                       #
+#    Command line       =  -f D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·ä #
+#                          ÃùÆ÷\Projects\zstack\Samples\SampleApp\CC2530DB\.. #
+#                          \..\..\Tools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ     #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\Tools\CC2530DB\f8wConfig.cfg (-DSECURE=0       #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF11                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Components\HARDWARE\beep.c -D ZIGBEEPRO -D       #
+#                          ZTOOL_P1 -D MT_SYS_FUNC -D xMT_ZDO_FUNC -D         #
+#                          LCD_SUPPORTED=DEBUG -D NV_RESTORE -lC              #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\Coord #
+#                          inator\List\ -lA D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2 #
+#                          530\NODERED-·äÃùÆ÷\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\Coordinator\List\ --diag_suppress      #
+#                          Pe001,Pa010 -o D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC253 #
+#                          0\NODERED-·äÃùÆ÷\Projects\zstack\Samples\SampleApp #
+#                          \CC2530DB\Coordinator\Obj\ -e --debug              #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½ #
+#                          Ì³Ì\CC2530\NODERED-·äÃùÆ÷\Projects\zstack\Samples\ #
+#                          SampleApp\CC2530DB\ -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì #
+#                          ³Ì\CC2530\NODERED-·äÃùÆ÷\Projects\zstack\Samples\S #
+#                          ampleApp\CC2530DB\..\SOURCE\ -I                    #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\ZMAIN\TI2530DB\ -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì #
+#                          ³Ì\CC2530\NODERED-·äÃùÆ÷\Projects\zstack\Samples\S #
+#                          ampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\MT\    #
+#                          -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·ä #
+#                          ÃùÆ÷\Projects\zstack\Samples\SampleApp\CC2530DB\.. #
+#                          \..\..\..\..\COMPONENTS\HAL\INCLUDE\ -I            #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\HAL\TARGET\CC2530EB\ -I       #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\OSAL\MCU\CCSOC\ -I            #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\OSAL\INCLUDE\ -I              #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\STACK\AF\ -I                  #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\STACK\NWK\ -I                 #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\STACK\SEC\ -I                 #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\STACK\SAPI\ -I                #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\STACK\SYS\ -I                 #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\STACK\ZDO\ -I                 #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\ZMAC\F8W\ -I                  #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\ZMAC\ -I                      #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\SERVICES\SADDR\ -I            #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\SERVICES\SDATA\ -I            #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\MAC\INCLUDE\ -I               #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\MAC\HIGH_LEVEL\ -I            #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf04\ -I       #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CH #
+#                          IP\ -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERE #
+#                          D-·äÃùÆ÷\Projects\zstack\Samples\SampleApp\CC2530D #
+#                          B\..\..\..\..\..\COMPONENTS\HARDWARE\ -Ohz         #
+#    List file          =  D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\Coord #
+#                          inator\List\beep.lst                               #
+#    Object file        =  D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ #
+#                          ÷\Projects\zstack\Samples\SampleApp\CC2530DB\Coord #
+#                          inator\Obj\beep.r51                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-·äÃùÆ÷\Components\HARDWARE\beep.c
+      1          #include "beep.h"
+                                 ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          //==========================================================
+      3          //	º¯ÊýÃû³Æ£º	Beep_Init()
+      4          //
+      5          //	º¯Êý¹¦ÄÜ£º	³õÊ¼»¯BEEP ¿ØÖÆIO
+      6          //
+      7          //	Èë¿Ú²ÎÊý£º	ÎÞ
+      8          //
+      9          //	·µ»Ø²ÎÊý£º	ÎÞ
+     10          //
+     11          //	ËµÃ÷£º		
+     12          //==========================================================
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     13          void Beep_Init(void)
+   \                     Beep_Init:
+     14          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     15          	 P1SEL &= ~BV(6); //GPIO¹¦ÄÜ		
+   \   000000   53F4BF       ANL     0xf4,#0xbf
+     16             P1DIR |= BV(6);  //P1.6¶¨ÒåÎªÊä³ö
+   \   000003   43FE40       ORL     0xfe,#0x40
+     17          }
+   \   000006   02....       LJMP    ?BRET
+   \   000009                REQUIRE P1SEL
+   \   000009                REQUIRE P1DIR
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Beep_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Beep_Init
+
+   Maximum stack usage in bytes:
+
+     Function  ISTACK PSTACK XSTACK
+     --------  ------ ------ ------
+     Beep_Init     0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label    Bytes
+     --------------    -----
+     P1SEL                1
+     P1DIR                1
+     Beep_Init            9
+     ??Beep_Init?relay    6
+
+ 
+ 9 bytes in segment BANKED_CODE
+ 6 bytes in segment BANK_RELAYS
+ 2 bytes in segment SFR_AN
+ 
+ 15 bytes of CODE memory
+  0 bytes of DATA memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: 1

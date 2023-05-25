@@ -1,0 +1,133 @@
+[
+    {
+        "id": "ad8fd7a5b2ae6ec3",
+        "type": "tab",
+        "label": "课程---光电开关检测",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b8bf1776222bb8a7",
+        "type": "function",
+        "z": "ad8fd7a5b2ae6ec3",
+        "name": "function 9",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "b870f094822a2da2"
+            ]
+        ]
+    },
+    {
+        "id": "8f03b310c178ed19",
+        "type": "tcp in",
+        "z": "ad8fd7a5b2ae6ec3",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "9080",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "b8bf1776222bb8a7",
+                "47ef24aff1c1cab9"
+            ]
+        ]
+    },
+    {
+        "id": "b870f094822a2da2",
+        "type": "ui_chart",
+        "z": "ad8fd7a5b2ae6ec3",
+        "name": "",
+        "group": "14f207f7d617ef1d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "光电开关状态曲线",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1b79bb",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 710,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47ef24aff1c1cab9",
+        "type": "debug",
+        "z": "ad8fd7a5b2ae6ec3",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "14f207f7d617ef1d",
+        "type": "ui_group",
+        "name": "光电开关",
+        "tab": "9096106786f05e25",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9096106786f05e25",
+        "type": "ui_tab",
+        "name": "NODE RED教程---光电开关检测",
+        "icon": "dashboard",
+        "order": 8,
+        "disabled": false,
+        "hidden": false
+    }
+]

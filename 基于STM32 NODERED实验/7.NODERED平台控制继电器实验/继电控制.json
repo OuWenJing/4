@@ -1,0 +1,176 @@
+[
+    {
+        "id": "bd30c258de9c6100",
+        "type": "tab",
+        "label": "课程----继电器控制流程",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5978502552d2fec5",
+        "type": "ui_switch",
+        "z": "bd30c258de9c6100",
+        "name": "",
+        "label": "继电器1开关",
+        "tooltip": "",
+        "group": "83712901d218bb53",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "RELAY1,ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "RELAY1,OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "094f9ae9e1aace6c",
+                "b40bc00815259c8c"
+            ]
+        ]
+    },
+    {
+        "id": "e633d85a57568b11",
+        "type": "ui_switch",
+        "z": "bd30c258de9c6100",
+        "name": "",
+        "label": "继电器2开关",
+        "tooltip": "",
+        "group": "83712901d218bb53",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "RELAY2,ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "RELAY2,OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "094f9ae9e1aace6c"
+            ]
+        ]
+    },
+    {
+        "id": "094f9ae9e1aace6c",
+        "type": "function",
+        "z": "bd30c258de9c6100",
+        "name": "function 5",
+        "func": "var flag = msg.payload;\nif (flag == \"RELAY1,ON\") {\n    msg = { payload: \"$RELAY1,1\" };\n}\nif (flag == \"RELAY1,OFF\") {\n    msg = { payload: \"$RELAY1,0\" };\n}\nif (flag == \"RELAY2,ON\") {\n    msg = { payload: \"$RELAY2,1\" };\n}\nif (flag == \"RELAY2,OFF\") {\n    msg = { payload: \"$RELAY2,0\" };\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [
+                "e7b7a9bb9c0ed5f8",
+                "295f486babd08989"
+            ]
+        ]
+    },
+    {
+        "id": "e7b7a9bb9c0ed5f8",
+        "type": "tcp out",
+        "z": "bd30c258de9c6100",
+        "name": "",
+        "host": "",
+        "port": "9080",
+        "beserver": "server",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 860,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b40bc00815259c8c",
+        "type": "debug",
+        "z": "bd30c258de9c6100",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "295f486babd08989",
+        "type": "debug",
+        "z": "bd30c258de9c6100",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a7135719d0494db3",
+        "type": "ui_spacer",
+        "z": "bd30c258de9c6100",
+        "name": "spacer",
+        "group": "89cd689ec949447f",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "83712901d218bb53",
+        "type": "ui_group",
+        "name": "继电器控制",
+        "tab": "45414aa3380da26e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "45414aa3380da26e",
+        "type": "ui_tab",
+        "name": "NODE RED教程----继电器控制",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,202 @@
+[
+    {
+        "id": "f63cbd94a0d8451f",
+        "type": "tab",
+        "label": "课程----风扇控制流程",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8dccdbb24375e2dd",
+        "type": "function",
+        "z": "f63cbd94a0d8451f",
+        "name": "function 6",
+        "func": "var flag = msg.payload;\nif (flag == \"FAN,OFF\") {\n    msg = { payload: \"$FAN,0/r/n\" };\n}\nif (flag==\"FAN1,ON\")\n{\n    msg = { payload: \"$FAN,1/r/n\"}; \n}\nif (flag == \"FAN2,ON\") {\n    msg = { payload: \"$FAN,2/r/n\" };\n}\nif (flag == \"FAN3,ON\") {\n    msg = { payload: \"$FAN,3/r/n\" };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "56efd3320378d7ac",
+                "8e0fd56e04e1e157"
+            ]
+        ]
+    },
+    {
+        "id": "56efd3320378d7ac",
+        "type": "tcp out",
+        "z": "f63cbd94a0d8451f",
+        "name": "指令输出--9080",
+        "host": "",
+        "port": "9080",
+        "beserver": "server",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8e0fd56e04e1e157",
+        "type": "debug",
+        "z": "f63cbd94a0d8451f",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "eb051668436f1c43",
+        "type": "ui_switch",
+        "z": "f63cbd94a0d8451f",
+        "name": "",
+        "label": "风扇转速2开关",
+        "tooltip": "",
+        "group": "94ce3d2fcce02773",
+        "order": 2,
+        "width": "8",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "FAN2,ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "FAN,OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "8dccdbb24375e2dd",
+                "535a19a249330f42"
+            ]
+        ]
+    },
+    {
+        "id": "535a19a249330f42",
+        "type": "debug",
+        "z": "f63cbd94a0d8451f",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1e184c7015458bb1",
+        "type": "ui_switch",
+        "z": "f63cbd94a0d8451f",
+        "name": "",
+        "label": "风扇转速1开关",
+        "tooltip": "",
+        "group": "94ce3d2fcce02773",
+        "order": 1,
+        "width": "8",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "FAN1,ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "FAN,OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "8dccdbb24375e2dd",
+                "535a19a249330f42"
+            ]
+        ]
+    },
+    {
+        "id": "a15a63e026b1331d",
+        "type": "ui_switch",
+        "z": "f63cbd94a0d8451f",
+        "name": "",
+        "label": "风扇转速3开关",
+        "tooltip": "",
+        "group": "94ce3d2fcce02773",
+        "order": 3,
+        "width": "8",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "FAN3,ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "FAN,OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "8dccdbb24375e2dd",
+                "535a19a249330f42"
+            ]
+        ]
+    },
+    {
+        "id": "94ce3d2fcce02773",
+        "type": "ui_group",
+        "name": "风扇控制",
+        "tab": "378dc08b8aa4984f",
+        "order": 9,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "378dc08b8aa4984f",
+        "type": "ui_tab",
+        "name": "NODE RED教程----风扇控制",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]

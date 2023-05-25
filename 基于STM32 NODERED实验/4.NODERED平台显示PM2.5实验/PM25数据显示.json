@@ -1,0 +1,178 @@
+[
+    {
+        "id": "81d67083157638b0",
+        "type": "tab",
+        "label": "课程----PM2.5数据显示",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7036eff17207e583",
+        "type": "function",
+        "z": "81d67083157638b0",
+        "name": "function 7",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "bbc71b21eb31a81f",
+                "5253a235faf95d55",
+                "35fb93e9bb13cc2c"
+            ]
+        ]
+    },
+    {
+        "id": "a9d8e0dfb79d6510",
+        "type": "tcp in",
+        "z": "81d67083157638b0",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "9080",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "7036eff17207e583",
+                "aa37239ca42a4b97"
+            ]
+        ]
+    },
+    {
+        "id": "bbc71b21eb31a81f",
+        "type": "ui_gauge",
+        "z": "81d67083157638b0",
+        "name": "PM2.5",
+        "group": "7f044845b7e7e4d5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PM2.5",
+        "label": "um",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 650,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "aa37239ca42a4b97",
+        "type": "debug",
+        "z": "81d67083157638b0",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5253a235faf95d55",
+        "type": "debug",
+        "z": "81d67083157638b0",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "35fb93e9bb13cc2c",
+        "type": "ui_chart",
+        "z": "81d67083157638b0",
+        "name": "",
+        "group": "7f044845b7e7e4d5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "PM2.5曲线",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f044845b7e7e4d5",
+        "type": "ui_group",
+        "name": "PM2.5数据",
+        "tab": "1c04f17c768780f9",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1c04f17c768780f9",
+        "type": "ui_tab",
+        "name": "NODE RED教程----PM2.5数据显示",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]

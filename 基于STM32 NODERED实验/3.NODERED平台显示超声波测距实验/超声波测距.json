@@ -1,0 +1,99 @@
+[
+    {
+        "id": "dbf0e7a51a2862d5",
+        "type": "tab",
+        "label": "课程---超声波测距显示",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0af36a7096d8cf74",
+        "type": "tcp in",
+        "z": "dbf0e7a51a2862d5",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "9080",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "e4f1e7639ebd4a70"
+            ]
+        ]
+    },
+    {
+        "id": "e4f1e7639ebd4a70",
+        "type": "function",
+        "z": "dbf0e7a51a2862d5",
+        "name": "function 13",
+        "func": "var dis = (msg.payload[0] - 0x30) * 1000 + (msg.payload[1] - 0x30) * 100 + (msg.payload[2] - 0x30) * 10 + (msg.payload[3] - 0x30) ;\nmsg.payload=dis;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "5e866ae5f885a128"
+            ]
+        ]
+    },
+    {
+        "id": "5e866ae5f885a128",
+        "type": "ui_gauge",
+        "z": "dbf0e7a51a2862d5",
+        "name": "",
+        "group": "0b4b47c3704b632c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "超声波测距",
+        "label": "cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 730,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "0b4b47c3704b632c",
+        "type": "ui_group",
+        "name": "超声波测距",
+        "tab": "d60a10edc460316d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d60a10edc460316d",
+        "type": "ui_tab",
+        "name": "NODE RED教程---超声波测距显示",
+        "icon": "dashboard",
+        "order": 10,
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,435 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         30/Apr/2023  23:42:45 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Components\HARDWARE\WiFi.c                      #
+#    Command line       =  -f D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LE #
+#                          D¿ØÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\. #
+#                          .\..\..\Tools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ    #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\Tools\CC2530DB\f8wConfig.cfg (-DSECURE=0      #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF11                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Components\HARDWARE\WiFi.c -D ZIGBEEPRO -D      #
+#                          ZTOOL_P1 -D MT_SYS_FUNC -D xMT_ZDO_FUNC -D         #
+#                          LCD_SUPPORTED=DEBUG -D NV_RESTORE -lC              #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\Coor #
+#                          dinator\List\ -lA D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC #
+#                          2530\NODERED-LED¿ØÖÆ\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\Coordinator\List\ --diag_suppress    #
+#                          Pe001,Pa010 -o D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC253 #
+#                          0\NODERED-LED¿ØÖÆ\Projects\zstack\Samples\SampleAp #
+#                          p\CC2530DB\Coordinator\Obj\ -e --debug             #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½ #
+#                          Ì³Ì\CC2530\NODERED-LED¿ØÖÆ\Projects\zstack\Samples #
+#                          \SampleApp\CC2530DB\ -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½ #
+#                          Ì³Ì\CC2530\NODERED-LED¿ØÖÆ\Projects\zstack\Samples #
+#                          \SampleApp\CC2530DB\..\SOURCE\ -I                  #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\ZMAIN\TI2530DB\ -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½ #
+#                          Ì³Ì\CC2530\NODERED-LED¿ØÖÆ\Projects\zstack\Samples #
+#                          \SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\MT\  #
+#                          -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LE #
+#                          D¿ØÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\. #
+#                          .\..\..\..\..\COMPONENTS\HAL\INCLUDE\ -I           #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\HAL\TARGET\CC2530EB\ -I      #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\OSAL\MCU\CCSOC\ -I           #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\OSAL\INCLUDE\ -I             #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\STACK\AF\ -I                 #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\STACK\NWK\ -I                #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\STACK\SEC\ -I                #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\STACK\SAPI\ -I               #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\STACK\SYS\ -I                #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\STACK\ZDO\ -I                #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\ZMAC\F8W\ -I                 #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\ZMAC\ -I                     #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\SERVICES\SADDR\ -I           #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\SERVICES\SDATA\ -I           #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MAC\INCLUDE\ -I              #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MAC\HIGH_LEVEL\ -I           #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf04\ -I      #
+#                          D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_C #
+#                          HIP\ -I D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODER #
+#                          ED-LED¿ØÖÆ\Projects\zstack\Samples\SampleApp\CC253 #
+#                          0DB\..\..\..\..\..\COMPONENTS\HARDWARE\ -Ohz       #
+#    List file          =  D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\Coor #
+#                          dinator\List\WiFi.lst                              #
+#    Object file        =  D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿Ø #
+#                          ÖÆ\Projects\zstack\Samples\SampleApp\CC2530DB\Coor #
+#                          dinator\Obj\WiFi.r51                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿ØÖÆ\Components\HARDWARE\WiFi.c
+      1          #include "Usart.h"	
+
+  #ifndef __DELAY_H
+                  ^
+"D:\×ÊÁÏ\°Ë³Ç-V2\·ä³²\ÐÂ±à½Ì³Ì\CC2530\NODERED-LED¿ØÖÆ\Components\HARDWARE\delay.h",1  Warning[Pa050]: 
+          non-native end of line sequence detected (this diagnostic is only
+          issued once)
+      2          #include "delay.h"
+      3          #include "WiFi.h"
+      4          
+      5          //==========================================================
+      6          //	º¯ÊýÃû³Æ£º	WiFi_Init()
+      7          //
+      8          //	º¯Êý¹¦ÄÜ£º	³õÊ¼»¯WiFi
+      9          //
+     10          //	Èë¿Ú²ÎÊý£º	ÎÞ
+     11          //
+     12          //	·µ»Ø²ÎÊý£º	ÎÞ
+     13          //
+     14          //	ËµÃ÷£º		
+     15          //==========================================================
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     16          void WiFi_Init(void)
+   \                     WiFi_Init:
+     17          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     18              WiFi_Send_Cmd(CLOSE_TCP,"",5);			/*ÍË³öWiFiÍ¸´«Ä£Ê½*/
+   \   000005                ; Setup parameters for call to function WiFi_Send_Cmd
+   \   000005   75..05       MOV     ?V0 + 0,#0x5
+   \   000008   75..00       MOV     ?V0 + 1,#0x0
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000010   7C..         MOV     R4,#`?<Constant "">` & 0xff
+   \   000012   7D..         MOV     R5,#(`?<Constant "">` >> 8) & 0xff
+   \   000014   7A..         MOV     R2,#`?<Constant "+++">` & 0xff
+   \   000016   7B..         MOV     R3,#(`?<Constant "+++">` >> 8) & 0xff
+   \   000018   12....       LCALL   ?Subroutine0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   00001B   12....       LCALL   ?DEALLOC_XSTACK8
+     19          
+     20              delay_ms(3000);
+   \   00001E                ; Setup parameters for call to function delay_ms
+   \   00001E   90....       MOV     DPTR,#__Constant_bb8
+   \   000021   12....       LCALL   ?XLOAD_R2345
+   \   000024   12....       LCALL   ??delay_ms?relay
+     21          
+     22              while(!WiFi_Send_Cmd(AT,"OK",20));		        /*½øÈëATÃüÁîÄ£Ê½*/														//ÏÔÊ¾µçÔ´×´Ì¬
+   \                     ??WiFi_Init_0:
+   \   000027                ; Setup parameters for call to function WiFi_Send_Cmd
+   \   000027   75..14       MOV     ?V0 + 0,#0x14
+   \   00002A   75..00       MOV     ?V0 + 1,#0x0
+   \   00002D   78..         MOV     R0,#?V0 + 0
+   \   00002F   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000032   7C..         MOV     R4,#`?<Constant "OK">` & 0xff
+   \   000034   7D..         MOV     R5,#(`?<Constant "OK">` >> 8) & 0xff
+   \   000036   7A..         MOV     R2,#`?<Constant "AT\\r\\n">` & 0xff
+   \   000038   7B..         MOV     R3,#(`?<Constant "AT\\r\\n">` >> 8) & 0xff
+   \   00003A   12....       LCALL   ?Subroutine0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   00003D   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000040   8B..         MOV     ?V0 + 1,R3
+   \   000042   EA           MOV     A,R2
+   \   000043   45..         ORL     A,?V0 + 1
+   \   000045   60E0         JZ      ??WiFi_Init_0
+     23              
+     24              while(!WiFi_Send_Cmd(CWMODE,"OK",30));		/*ÉèÖÃÄ£¿éÓ¦ÓÃÄ£Ê½*/													//ÏÔÊ¾µçÔ´×´Ì¬
+   \                     ??WiFi_Init_1:
+   \   000047                ; Setup parameters for call to function WiFi_Send_Cmd
+   \   000047   75..1E       MOV     ?V0 + 0,#0x1e
+   \   00004A   75..00       MOV     ?V0 + 1,#0x0
+   \   00004D   78..         MOV     R0,#?V0 + 0
+   \   00004F   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000052   7C..         MOV     R4,#`?<Constant "OK">` & 0xff
+   \   000054   7D..         MOV     R5,#(`?<Constant "OK">` >> 8) & 0xff
+   \   000056   7A..         MOV     R2,#`?<Constant "AT+CWMODE=3\\r\\n">` & 0xff
+   \   000058   7B..         MOV     R3,#(`?<Constant "AT+CWMODE=3\\r\\n">` >> 8) & 0xff
+   \   00005A   12....       LCALL   ?Subroutine0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   00005D   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000060   8B..         MOV     ?V0 + 1,R3
+   \   000062   EA           MOV     A,R2
+   \   000063   45..         ORL     A,?V0 + 1
+   \   000065   60E0         JZ      ??WiFi_Init_1
+     25          
+     26          //    while(!WiFi_Send_Cmd(RST,"",80));		        /*ÖØÖÃÄ£¿é*/															//ÏÔÊ¾µçÔ´×´Ì¬
+     27          //
+     28          //    while(!WiFi_Send_Cmd(CIFSR,"OK",30));;		/*²éÑ¯Éè±¸IP¿É·ÅÔÚÐèÒªµÄÎ»ÖÃ*/															//ÏÔÊ¾µçÔ´×´Ì¬
+     29          
+     30              while(!WiFi_Send_Cmd(CWJAP,"OK",300));		/*ÅäÖÃÒªÁ¬½ÓµÄÂ·ÓÉÆ÷µÄSSIDºÍÃÜÂë*/																			/*LED2ÁÁ*/
+   \                     ??WiFi_Init_2:
+   \   000067                ; Setup parameters for call to function WiFi_Send_Cmd
+   \   000067   75..2C       MOV     ?V0 + 0,#0x2c
+   \   00006A   75..01       MOV     ?V0 + 1,#0x1
+   \   00006D   78..         MOV     R0,#?V0 + 0
+   \   00006F   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000072   7C..         MOV     R4,#`?<Constant "OK">` & 0xff
+   \   000074   7D..         MOV     R5,#(`?<Constant "OK">` >> 8) & 0xff
+   \   000076   7A..         MOV     R2,#`?<Constant "AT+CWJAP=\\"zkk_2.4g\\",\\"...">` & 0xff
+   \   000078   7B..         MOV     R3,#(`?<Constant "AT+CWJAP=\\"zkk_2.4g\\",\\"...">` >> 8) & 0xff
+   \   00007A   12....       LCALL   ?Subroutine0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   00007D   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000080   8B..         MOV     ?V0 + 1,R3
+   \   000082   EA           MOV     A,R2
+   \   000083   45..         ORL     A,?V0 + 1
+   \   000085   60E0         JZ      ??WiFi_Init_2
+     31          
+     32              while(!WiFi_Send_Cmd(TCP_CIPSTART,"OK",60));	/*Óë·þÎñÆ÷½¨Á¢TCPÁ¬½Ó*/																			/*LED3ÁÁ*/
+   \                     ??WiFi_Init_3:
+   \   000087                ; Setup parameters for call to function WiFi_Send_Cmd
+   \   000087   75..3C       MOV     ?V0 + 0,#0x3c
+   \   00008A   75..00       MOV     ?V0 + 1,#0x0
+   \   00008D   78..         MOV     R0,#?V0 + 0
+   \   00008F   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000092   7C..         MOV     R4,#`?<Constant "OK">` & 0xff
+   \   000094   7D..         MOV     R5,#(`?<Constant "OK">` >> 8) & 0xff
+   \   000096   7A..         MOV     R2,#`?<Constant "AT+CIPSTART=\\"TCP\\",\\"19...">` & 0xff
+   \   000098   7B..         MOV     R3,#(`?<Constant "AT+CIPSTART=\\"TCP\\",\\"19...">` >> 8) & 0xff
+   \   00009A   12....       LCALL   ?Subroutine0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   00009D   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000A0   8B..         MOV     ?V0 + 1,R3
+   \   0000A2   EA           MOV     A,R2
+   \   0000A3   45..         ORL     A,?V0 + 1
+   \   0000A5   60E0         JZ      ??WiFi_Init_3
+     33          
+     34              while(!WiFi_Send_Cmd(CIPMODE,"OK",60));		/*Í¸´«Ä£Ê½*/
+   \                     ??WiFi_Init_4:
+   \   0000A7                ; Setup parameters for call to function WiFi_Send_Cmd
+   \   0000A7   75..00       MOV     ?V0 + 1,#0x0
+   \   0000AA   78..         MOV     R0,#?V0 + 0
+   \   0000AC   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000AF   7C..         MOV     R4,#`?<Constant "OK">` & 0xff
+   \   0000B1   7D..         MOV     R5,#(`?<Constant "OK">` >> 8) & 0xff
+   \   0000B3   7A..         MOV     R2,#`?<Constant "AT+CIPMODE=1\\r\\n">` & 0xff
+   \   0000B5   7B..         MOV     R3,#(`?<Constant "AT+CIPMODE=1\\r\\n">` >> 8) & 0xff
+   \   0000B7   12....       LCALL   ?Subroutine0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   0000BA   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000BD   8B..         MOV     ?V0 + 1,R3
+   \   0000BF   EA           MOV     A,R2
+   \   0000C0   45..         ORL     A,?V0 + 1
+   \   0000C2   60E3         JZ      ??WiFi_Init_4
+     35              
+     36              while(!WiFi_Send_Cmd(CIPSEND,"OK",30));		/*¿ªÊ¼´«Êä*/																			/*LED4ÁÁ*/
+   \                     ??WiFi_Init_5:
+   \   0000C4                ; Setup parameters for call to function WiFi_Send_Cmd
+   \   0000C4   75..1E       MOV     ?V0 + 0,#0x1e
+   \   0000C7   75..00       MOV     ?V0 + 1,#0x0
+   \   0000CA   78..         MOV     R0,#?V0 + 0
+   \   0000CC   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000CF   7C..         MOV     R4,#`?<Constant "OK">` & 0xff
+   \   0000D1   7D..         MOV     R5,#(`?<Constant "OK">` >> 8) & 0xff
+   \   0000D3   7A..         MOV     R2,#`?<Constant "AT+CIPSEND\\r\\n">` & 0xff
+   \   0000D5   7B..         MOV     R3,#(`?<Constant "AT+CIPSEND\\r\\n">` >> 8) & 0xff
+   \   0000D7   12....       LCALL   ?Subroutine0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   0000DA   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000DD   8B..         MOV     ?V0 + 1,R3
+   \   0000DF   EA           MOV     A,R2
+   \   0000E0   45..         ORL     A,?V0 + 1
+   \   0000E2   60E0         JZ      ??WiFi_Init_5
+     37              
+     38              //while(!WiFi_Send_Cmd(CIPSTATUS,"",30));		/*Á¬½ÓÉè±¸*/
+     39              
+     40              WiFi_AT_STA = 1;           			        /*ATÖ¸Áî·¢ËÍÍê³É±êÖ¾Î»*/	
+   \   0000E4   90....       MOV     DPTR,#WiFi_AT_STA
+   \   0000E7   7401         MOV     A,#0x1
+   \   0000E9   F0           MOVX    @DPTR,A
+     41          }
+   \   0000EA   7F02         MOV     R7,#0x2
+   \   0000EC   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   ??WiFi_Send_Cmd?relay
+   \   000003   7402         MOV     A,#0x2
+   \   000005   22           RET
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??WiFi_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    WiFi_Init
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "+++">`:
+   \   000000   2B2B2B00     DB "+++"
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "">`:
+   \   000000   00           DB ""
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT\\r\\n">`:
+   \   000000   41540D0A     DB "AT\015\012"
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "OK">`:
+   \   000000   4F4B00       DB "OK"
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CWMODE=3\\r\\n">`:
+   \   000000   41542B43     DB "AT+CWMODE=3\015\012"
+   \            574D4F44
+   \            453D330D
+   \            0A00    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CWJAP=\\"zkk_2.4g\\",\\"...">`:
+   \   000000   41542B43     DB "AT+CWJAP=\"zkk_2.4g\",\"18696560024\"\015\012"
+   \            574A4150
+   \            3D227A6B
+   \            6B5F322E
+   \            3467222C
+   \            22313836
+   \            39363536
+   \            30303234
+   \            220D0A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CIPSTART=\\"TCP\\",\\"19...">`:
+   \   000000   41542B43     DB "AT+CIPSTART=\"TCP\",\"192.168.3.213\",9080\015\012"
+   \            49505354
+   \            4152543D
+   \            22544350
+   \            222C2231
+   \            39322E31
+   \            36382E33
+   \            2E323133
+   \            222C3930
+   \            38300D0A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CIPMODE=1\\r\\n">`:
+   \   000000   41542B43     DB "AT+CIPMODE=1\015\012"
+   \            49504D4F
+   \            44453D31
+   \            0D0A00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "AT+CIPSEND\\r\\n">`:
+   \   000000   41542B43     DB "AT+CIPSEND\015\012"
+   \            49505345
+   \            4E440D0A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_bb8:
+   \   000000   B80B0000     DD 3000
+     42          
+     43          
+
+   Maximum stack usage in bytes:
+
+     Function           ISTACK PSTACK XSTACK
+     --------           ------ ------ ------
+     WiFi_Init              0      0     12
+       -> WiFi_Send_Cmd     0      0     24
+       -> delay_ms          0      0     20
+       -> WiFi_Send_Cmd     0      0     24
+       -> WiFi_Send_Cmd     0      0     24
+       -> WiFi_Send_Cmd     0      0     24
+       -> WiFi_Send_Cmd     0      0     24
+       -> WiFi_Send_Cmd     0      0     24
+       -> WiFi_Send_Cmd     0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                            Bytes
+     --------------                            -----
+     WiFi_Init                                  239
+     ?Subroutine0                                 6
+     ??WiFi_Init?relay                            6
+     ?<Constant "+++">                            4
+     ?<Constant "">                               1
+     ?<Constant "AT\r\n">                         5
+     ?<Constant "OK">                             3
+     ?<Constant "AT+CWMODE=3\r\n">               14
+     ?<Constant "AT+CWJAP=\"zkk_2.4g\",\"...">   36
+     ?<Constant "AT+CIPSTART=\"TCP\",\"19...">   41
+     ?<Constant "AT+CIPMODE=1\r\n">              15
+     ?<Constant "AT+CIPSEND\r\n">                13
+     __Constant_bb8                               4
+
+ 
+ 245 bytes in segment BANKED_CODE
+   6 bytes in segment BANK_RELAYS
+ 136 bytes in segment XDATA_ROM_C
+ 
+ 251 bytes of CODE  memory
+ 132 bytes of CONST memory (+ 4 bytes shared)
+
+Errors: none
+Warnings: 1
